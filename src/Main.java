@@ -1,13 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+      User user =  new User();
+      user.setName("Joseph", "Brown");
+      System.out.println(user.getFullName());
     }
 }
+ class User {
+    private String firstName;
+    private String lastName;
+
+     public String getFullName() {
+         return String.join(" ", firstName, lastName);
+     }
+    public void setName(String firstName, String lastName) {
+         throwEmptyInputsError(firstName, lastName);
+
+         this.firstName = firstName;
+         this.lastName = lastName;
+    }
+
+    private void throwEmptyInputsError(String firstName, String lastName) {
+         boolean hasEmptyInputs = firstName.length() <= 0 || lastName.length() <= 0;
+         if (hasEmptyInputs) throw new IllegalArgumentException("Inputs must not be empty");
+    }
+}
+
