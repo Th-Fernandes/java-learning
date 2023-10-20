@@ -13,7 +13,7 @@ public class User {
     }
 
     private void throwEmptyInputsError(String firstName, String lastName) {
-        boolean hasEmptyInputs = firstName.length() <= 0 || lastName.length() <= 0;
+        boolean hasEmptyInputs = firstName.isEmpty() || lastName.isEmpty();
         if (hasEmptyInputs) throw new IllegalArgumentException("Inputs must not be empty");
     }
 }
