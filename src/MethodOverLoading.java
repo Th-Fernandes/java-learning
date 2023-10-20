@@ -6,5 +6,4 @@ public class MethodOverLoading {
     public float getSquare(float number) {
         return number * number;
     }
-
 }
