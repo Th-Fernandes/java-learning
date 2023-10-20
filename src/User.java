@@ -4,18 +4,20 @@ public class User {
         return String.join(" ", name.first, name.last);
     }
     public void setName(PersonName name) {
-        throwEmptyInputsError();
+        throwEmptyInputsError(name);
 
         this.name.first = name.first;
         this.name.last = name.last;
     }
 
-    private void throwEmptyInputsError() {
+    private void throwEmptyInputsError(PersonName name) {
         boolean hasEmptyInputs = name.first.isEmpty() || name.last.isEmpty();
-        if (hasEmptyInputs) throw new IllegalArgumentException("Inputs must not be empty");
+        if (hasEmptyInputs)
+            throw new IllegalArgumentException("Inputs must not be empty");
     }
 }
 
 class PersonName {
-    public String first = "Jonathan", last = "Doe";
+    public String first = "", last = "";
+
 }
