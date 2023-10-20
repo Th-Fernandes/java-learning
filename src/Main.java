@@ -1,9 +1,13 @@
 public class Main {
     public static void main(String[] args) {
       User user =  new User();
-      user.setName("Joseph", "Brown");
-      System.out.println(user.getFullName());
+      PersonName name = new PersonName();
 
+      name.first = "Thiago";
+      name.last = "Fernandes";
+      user.setName(name);
+
+      System.out.println(user.getFullName());
       printSquareNumbers();
     }
 
@@ -12,5 +16,6 @@ public class Main {
         System.out.println(x.getSquare(3));
         System.out.println(x.getSquare(34.5f));
     }
+
 }
 

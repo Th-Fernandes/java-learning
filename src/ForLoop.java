@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ForLoop {
     public static void main(String[] args) {
         String[] characters = { "pyke", "blitzcrank", "nautilus" };

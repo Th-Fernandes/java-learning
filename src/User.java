@@ -1,18 +1,21 @@
 public class User {
-    private String firstName, lastName;
-
+    PersonName name = new PersonName();
     public String getFullName() {
-        return String.join(" ", firstName, lastName);
+        return String.join(" ", name.first, name.last);
     }
-    public void setName(String firstName, String lastName) {
-        throwEmptyInputsError(firstName, lastName);
+    public void setName(PersonName name) {
+        throwEmptyInputsError();
 
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name.first = name.first;
+        this.name.last = name.last;
     }
 
-    private void throwEmptyInputsError(String firstName, String lastName) {
-        boolean hasEmptyInputs = firstName.isEmpty() || lastName.isEmpty();
+    private void throwEmptyInputsError() {
+        boolean hasEmptyInputs = name.first.isEmpty() || name.last.isEmpty();
         if (hasEmptyInputs) throw new IllegalArgumentException("Inputs must not be empty");
     }
+}
+
+class PersonName {
+    public String first = "Jonathan", last = "Doe";
 }
