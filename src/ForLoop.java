@@ -2,8 +2,7 @@ public class ForLoop {
     public static void main(String[] args) {
         String[] characters = { "pyke", "blitzcrank", "nautilus" };
 
-        for(int i = 0; i < characters.length; i++)
-            System.out.println(characters[i]);
+        for (String s : characters) System.out.println(s);
 
 
         /* For-Each Loop */
