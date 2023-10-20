@@ -1,6 +1,5 @@
 public class User {
-    private String firstName;
-    private String lastName;
+    private String firstName, lastName;
 
     public String getFullName() {
         return String.join(" ", firstName, lastName);

@@ -11,7 +11,7 @@ public class TypeCasting {
 
     public static void floatToDouble() {
         float x = 60.9f;
-        double y = x;
+        final double y = x;
         System.out.println(y);
         // good-to-know: when casting is done on a number who have a
         // number different than zero on its decimals it might break
@@ -20,7 +20,8 @@ public class TypeCasting {
 
     public void invalidCastingExamples() {
         float x = 60.9f;
-        boolean isPossible = x;
-        String xToString = x;
+//        boolean isPossible = x;
+//        String xToString = x;
+
     }
 }
