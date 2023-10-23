@@ -6,6 +6,7 @@ public class Main {
     private static void printSamples() {
         printUserFullName();
         printSquareNumbers();
+        printMultidimensionalArray();
     }
 
     private static void printUserFullName() {
@@ -27,6 +28,13 @@ public class Main {
         MethodOverLoading x = new MethodOverLoading();
         System.out.println(x.getSquare(3));
         System.out.println(x.getSquare(34.5f));
+    }
+
+    private static void printMultidimensionalArray() {
+        MultidimensionalArray gameboard = new MultidimensionalArray();
+        gameboard.setRow(new int[]{1, 2, 4});
+        gameboard.setRow(new int[]{4, 8, 32});
+        gameboard.getGameBoard();
     }
 
 }
