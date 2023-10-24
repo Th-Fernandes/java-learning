@@ -56,9 +56,9 @@ public class Main {
 
     private static void printArrayDiff() {
         int[] a = new int[] {1, 2, 3, 4};
-        int[] b = new int[] {1, 4};
+        int[] b = new int[] {1, 4, 3};
 
-        int[] Arr = new Kata().arrayDiff(a, b);
+        int[] Arr = new ArrayDiff().arrayDiff(a, b);
 
         for(int i = 0; i < Arr.length; i++)
             System.out.println(Arr[i]);
