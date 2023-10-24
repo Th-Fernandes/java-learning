@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class User {
-    PersonName name = new PersonName();
+    private PersonName name = new PersonName();
     public String getFullName() {
         return String.join(" ", name.first, name.last);
     }
