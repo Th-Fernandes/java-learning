@@ -20,6 +20,6 @@ public class User {
 }
 
 class PersonName {
-    public String first = "", last = "";
+    static public String first = "", last = "";
 
 }

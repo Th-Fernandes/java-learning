@@ -5,19 +5,6 @@ public class Main {
     public static void main(String[] args) {
 //      printSamples();
         printArrayDiff();
-
-//        int[] arr = {1, 2, 3, 2, 4, 4, 4, 4 ,4 ,4 };
-//        int[] arr2 = Arrays.stream(arr).distinct().toArray();
-//
-//        for(int i = 0; i < arr2.length; i++)
-//            System.out.println(arr2[i]);
-//        Set<Integer> set = new HashSet<Integer>();
-//        for (int i = 0; i < arr.length; i++)
-//            set.add(arr[i]);
-//        for(int el : set)
-//            System.out.println(el);
-
-
     }
 
     private static void printSamples() {
@@ -55,8 +42,8 @@ public class Main {
     }
 
     private static void printArrayDiff() {
-        int[] a = new int[] {1, 2, 3, 4};
-        int[] b = new int[] {1, 4, 3};
+        int[] a = new int[] {1, 2};
+        int[] b = new int[] {1};
 
         int[] Arr = new ArrayDiff().arrayDiff(a, b);
 
