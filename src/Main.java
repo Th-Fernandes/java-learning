@@ -5,6 +5,9 @@ public class Main {
     public static void main(String[] args) {
 //      printSamples();
         printArrayDiff();
+
+        Director paul = new Director();
+        paul.getEmployeeName();
     }
 
     private static void printSamples() {
